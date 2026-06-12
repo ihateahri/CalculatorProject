@@ -10,16 +10,18 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         while (true){
-            System.out.print("사칙연산 기호를 입력하세요: ");
-            String operator = scanner.next();
+            System.out.print("첫 번째 숫자를 입력하세요 (exit 입력시 종료): ");
+            String input = scanner.next();
 
-            if (operator.equals("exit")) {
+            if (input.equals("exit")) {
                 System.out.println("계산기를 종료합니다.");
                 break;
             }
+            // 문자열로 받은 input을 정수형으로 변경해야 계산을 할수 있음으로 int형으로 변환
+            int num1 = Integer.parseInt(input);
 
-            System.out.print("첫 번째 숫자를 입력하세요: ");
-            int num1 = scanner.nextInt();
+            System.out.print("사칙연산 기호를 입력하세요: ");
+            String operator = scanner.next();
 
             System.out.print("두 번째 숫자를 입력하세요: ");
             int num2 = scanner.nextInt();
